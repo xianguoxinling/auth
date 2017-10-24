@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       
+    <bean name="/create_token.action" class="com.control.token.CreateTokenController"></bean>
+    <bean name="/query_token.aciton" class="com.control.token.QueryTokenController"></bean>
+    <bean name="/query_user.action" class="com.control.token.QueryUserController"></bean>
+    <bean name="/update_token.action" class="com.control.token.UpdateTokenController"></bean>
+    
+    <bean name="/add_auth_person.action" class="com.control.auth.AddAuthToPersonController"></bean>
+    <bean name="/add_auth_role.action" class="com.control.auth.AddAuthToRoleController"></bean>
+    <bean name="/add_role_person.action" class="com.control.auth.AddRoleToPersonController"></bean>
+    <bean name="/check_auth.action" class="com.control.auth.CheckAuthController"></bean>
+    <bean name="/create_auth.action" class="com.control.auth.CreateAuthController"></bean>
+    <bean name="/create_role.action" class="com.control.auth.CreateRoleController"></bean>
+    <bean name="/del_auth_person" class="com.control.auth.DelAuthFromPersonController"></bean>
+    <bean name="/del_auth_role" class="com.control.auth.DelAuthFromRoleController"></bean>
+    <bean name="/del_role_person" class="com.control.auth.DelRoleFromPersonController"></bean>
+    <bean name="/query_openid.action" class="com.control.token.QueryOpenIDController"></bean>
+    <bean name="/store_register.action" class="com.control.login.StoreRegisterController"></bean>
+    <bean name="/store_login.action" class="com.control.login.StoreLoginController"></bean>
+    
+    <bean name="/xcx_login.action" class="com.control.login.xcxLoginController"></bean>
+    <bean name="/modify_userinfo.action" class="com.control.person.ModifyUserInfoController"></bean>
+    <bean name="/cretewxinfo.action" class="com.control.store.CreateWxInfoController"></bean>
+    <bean name="/querywxinfo.action" class="com.control.store.QueryWxInfoController"></bean>
+    <bean name="/changepassword.action" class="com.control.store.ChangerPasswordController"></bean>
+    <bean name="/checkphone.action" class="com.control.store.CheckPhone"></bean>
+    
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="200000000000" />
+	</bean>	
+</beans>
